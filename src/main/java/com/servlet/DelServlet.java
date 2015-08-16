@@ -41,10 +41,12 @@ public class DelServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Connection conn = ConnectionFactory.getInstance().makeConnextion();
 		try {
-			PreparedStatement ps = conn.prepareStatement("DELETE FROM film WHERE film_id = ?");
-			ps.setInt(1,Integer.getInteger( request.getParameter("id")));
+			PreparedStatement ps = conn.prepareStatement("DELETE  FROM film WHERE film_id = ?");
+			System.out.println(request.getParameter("id"));
+			int a = Integer.parseInt(request.getParameter("id").toString());
+			ps.setInt(1,a );
 			System.out.println(ps.toString());
-			
+			ps.execute();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
