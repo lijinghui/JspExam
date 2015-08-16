@@ -1,4 +1,0 @@
-mvn compile
-mvn tomcat:run
-
-在浏览器输入http://localhost:8080/JspExam/login.jsp
