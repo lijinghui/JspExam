@@ -7,14 +7,14 @@ package com.hand.entity;
 public class Film  extends IdEntiry{
 	private String title;
 	private String description;
-	private String language;
+	private int language;
 	
 	
 	
-	public String getLanguage() {
+	public int getLanguage() {
 		return language;
 	}
-	public void setLanguage(String language) {
+	public void setLanguage(int language) {
 		this.language = language;
 	}
 	public String getTitle() {

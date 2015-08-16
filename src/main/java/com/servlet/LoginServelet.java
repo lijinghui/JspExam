@@ -50,7 +50,7 @@ public class LoginServelet extends HttpServlet {
 		user.setName(userName);
 		boolean b = false;
 		try {
-
+			
 			b = cs.check(user);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

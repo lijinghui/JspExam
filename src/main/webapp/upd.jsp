@@ -12,7 +12,8 @@
 <title>修改</title>
 </head>
 <body>
-	<form action="">
+	<form action="<%=request.getContextPath()%>/UpdateServelt"
+		method="post">
 		<table border="1">
 			<tr>
 				<td>title</td>
@@ -21,9 +22,9 @@
 			</tr>
 
 			<tr>
-				<td><input type="text"
+				<td><input type="text" name="title"
 					value="<%=request.getParameter("tit").toString()%>" /></td>
-				<td><input style="width: 900px" type="text"
+				<td><input style="width: 900px" type="text" name="dis"
 					value="<%=request.getParameter("dis").toString()%>" /></td>
 				<td><select name="language">
 						<%
@@ -31,15 +32,19 @@
 							FilmDaoImp imp = new FilmDaoImp();
 							ResultSet rs = imp.getAllLan(conn);
 							while (rs.next()) {
+								int i = 1;
+								
 						%>
-
-						<option><%=rs.getString(1)%></option>
-
+						<option  ><%=rs.getString(1)%></option>
+							
 						<%
+						
+							i++;
 							}
 						%>
+						
 				</select></td>
-
+				
 			</tr>
 			<tr>
 				<td colspan="3"><input type="submit" value="添加" /> <input

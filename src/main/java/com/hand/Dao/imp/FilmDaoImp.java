@@ -18,7 +18,13 @@ public class FilmDaoImp implements FilmDao {
 
 	@Override
 	public void update(Connection conn, Film film) throws SQLException {
-		// TODO Auto-generated method stub
+		String upSql = "UPDATE film SET title = ?,description =? ,WHERE id=?";
+		PreparedStatement ps = conn.prepareStatement(upSql);
+
+		ps.setString(1, film.getTitle());
+		ps.setString(2, film.getDescription());
+		ps.setLong(3, film.getId());
+		ps.execute();
 
 	}
 
@@ -44,8 +50,7 @@ public class FilmDaoImp implements FilmDao {
 	}
 
 	public ResultSet getAllLan(Connection conn) throws SQLException {
-		PreparedStatement ps = conn.prepareStatement(
-				"SELECT name FROM language  ");
+		PreparedStatement ps = conn.prepareStatement("SELECT name FROM language  ");
 
 		return ps.executeQuery();
 	}

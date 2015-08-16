@@ -15,15 +15,7 @@
   	<url-pattern>/film.jsp</url-pattern>
   </filter-mapping>
   
-  <filter-mapping>
-  	<filter-name>IsLoginFilter</filter-name>
-  	<url-pattern>/upd.jsp</url-pattern>
-  </filter-mapping>
-  
-  <filter-mapping>
-  	<filter-name>IsLoginFilter</filter-name>
-  	<url-pattern>/del.jsp</url-pattern>
-  </filter-mapping>
+
  
   <servlet>
   	<servlet-name>LoginServelet</servlet-name>
@@ -37,6 +29,18 @@
   	<description></description>
   	<servlet-class>com.servlet.UpdateServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UpdateServelt</servlet-name>
+  	<display-name>UpdateServelt</display-name>
+  	<description></description>
+  	<servlet-class>com.servlet.UpdateServelt</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddServelt</servlet-name>
+  	<display-name>AddServelt</display-name>
+  	<description></description>
+  	<servlet-class>com.servlet.AddServelt</servlet-class>
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>LoginServelet</servlet-name>
@@ -45,6 +49,14 @@
   <servlet-mapping>
   	<servlet-name>UpdateServlet</servlet-name>
   	<url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateServelt</servlet-name>
+  	<url-pattern>/UpdateServelt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddServelt</servlet-name>
+  	<url-pattern>/AddServelt</url-pattern>
   </servlet-mapping>
   
  
