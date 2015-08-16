@@ -42,11 +42,11 @@
 				<td><input style="width: 900px" type="text" name="dis"
 					value="<%=rs.getString(3)%> readonly"></td>
 				<td><input type="text" name="lan"
-					value="<%=rs.getString(4)%> readonly"></td>
+					value="<%=rs.getString(4)%> "readonly></td>
 				<td><a href="add.jsp">增加</a></td>
-				<td><a href="del.jsp">删除</a></td>
+				<td><a href="del.jsp?id=<%=rs.getString(1)%>">删除</a></td>
 				<td>
-					<a href="upd.jsp?tit=<%=rs.getString(2)%>&dis=<%=rs.getString(3)%>">修改</a>
+					<a href="upd.jsp?tit=<%=rs.getString(2)%>&dis=<%=rs.getString(3)%>&id=<%=rs.getString(1)%>">修改</a>
 			</tr>
 
 			<%

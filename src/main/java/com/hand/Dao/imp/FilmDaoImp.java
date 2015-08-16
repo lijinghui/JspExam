@@ -44,7 +44,7 @@ public class FilmDaoImp implements FilmDao {
 
 	public ResultSet show(Connection conn) throws SQLException {
 		PreparedStatement ps = conn.prepareStatement(
-				"SELECT a.film_id,a.title,a.description,b.name FROM film AS a ,language AS b  WHERE a.language_id = b.language_id; ");
+				"SELECT a.film_id,a.title,a.description,b.name FROM film AS a JOIN language AS b  WHERE a.language_id = b.language_id ORDER BY film_id; ");
 
 		return ps.executeQuery();
 	}

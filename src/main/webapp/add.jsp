@@ -12,7 +12,7 @@
 <title>添加电影</title>
 </head>
 <body>
-	<form action="">
+	<form action="<%=request.getContextPath()%>/AddServelt" method="post">
 		<table border="1">
 			<tr>
 				<td>title</td>
@@ -21,9 +21,9 @@
 			</tr>
 
 			<tr>
-				<td><input type="text" /></td>
-				<td><input type="text" /></td>
-				<td><select name="language">
+				<td><input type="text" name="tit"/></td>
+				<td><input type="text"  name="dis"/></td>
+				<td><select name="lan">
 						<%
 							Connection conn = ConnectionFactory.getInstance().makeConnextion();
 							FilmDaoImp imp = new FilmDaoImp();

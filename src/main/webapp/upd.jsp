@@ -25,8 +25,12 @@
 				<td><input type="text" name="title"
 					value="<%=request.getParameter("tit").toString()%>" /></td>
 				<td><input style="width: 900px" type="text" name="dis"
-					value="<%=request.getParameter("dis").toString()%>" /></td>
-				<td><select name="language">
+					value="<%=request.getParameter("dis").toString()%>" />
+					<input type="hidden" name="id"
+					value="<%=request.getParameter("id").toString()%>" />
+					</td>
+					
+				<td><select name="lan">
 						<%
 							Connection conn = ConnectionFactory.getInstance().makeConnextion();
 							FilmDaoImp imp = new FilmDaoImp();

@@ -8,5 +8,7 @@
 </head>
 <body>
 要删除这电影？？？
+
+<a href="<%=request.getContextPath()%>/DelServlet?id=<%=request.getParameter("id")%>">确定</a>
 </body>
 </html>
